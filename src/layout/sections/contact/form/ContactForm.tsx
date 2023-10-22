@@ -41,7 +41,7 @@ const Form = styled.form`
         outline: none;
         background-color: transparent;
         border-radius: 6px;
-        color: #fff ;
+        color: #fff;
     }
 `;
 
