@@ -20,7 +20,7 @@ export const Button = styled.a<ButtonPropsType>`
     }
 
     &:hover {
-        background-color: #6e666675;
+      background-color: #6e666675;
     }
 
     ${(props) =>

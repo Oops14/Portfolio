@@ -15,7 +15,7 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
             <div className="proj-wrapper-item">
                 <ProjectItemTop>
                     <a href="#"></a>
-                    <img src={ProjectImg} alt="img" />
+                    <ItemImg src={ProjectImg} alt="img" />
                 </ProjectItemTop>
                 <ProjectItemBottom>
                     <ProjectItemTitle>
@@ -54,6 +54,8 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
     );
 };
 
+const ItemImg = styled.img``;
+
 const ProjectCardItem = styled.div`
     flex: 0 0 50%;
     max-width: 470px;
@@ -65,6 +67,10 @@ const ProjectCardItem = styled.div`
 
     padding-right: 15px;
     padding-left: 15px;
+
+    &:hover ${ItemImg} {
+        transform: scale(1.2);
+    }
 `;
 
 const ProjectItemTop = styled.div`
@@ -82,17 +88,15 @@ const ProjectItemTop = styled.div`
         z-index: 3;
     }
 
-    img {
+    ${ItemImg} {
         width: 100%;
         z-index: 1;
         transform: scale(1);
         transition: all 0.6s ease;
     }
 
-    &:hover {
-        > img {
-            transform: scale(1.2);
-        }
+    &:hover ${ItemImg} {
+        transform: scale(1.2);
     }
 `;
 
