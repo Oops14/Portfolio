@@ -10,6 +10,7 @@ import MongoImage from "../../../assets/skills_Images/mongodb.png";
 import PostgreImage from "../../../assets/skills_Images/postgre.png";
 import JestImage from "../../../assets/skills_Images/lapet.png";
 import ExpressImage from "../../../assets/skills_Images/express.png";
+import { theme } from "../../../styles/Theme";
 
 export const Skills = () => {
     return (
@@ -35,4 +36,12 @@ export const Skills = () => {
 
 const SkillsSection = styled.section`
     margin-bottom: 80px;
+
+    @media ${theme.media.tablet} {
+
+        ${FlexContainer} {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 `;

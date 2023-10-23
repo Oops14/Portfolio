@@ -5,5 +5,9 @@ export const theme = {
         titleColor: "rgba(217, 242, 242, 1)",
         mainBgColor: "#041f31",
         font: "#BDEBEA",
+    },
+    media: {
+        tablet: "(max-width: 999px)",
+        mobile: "(max-width: 568px)"
     }
 }

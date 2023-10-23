@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 import { Button } from "../Button";
 
 export const Menu = () => {
@@ -47,6 +48,12 @@ const RightNavigation = styled(LeftNavigation)`
 
         &:last-child {
             margin-right: 0;
+        }
+    }
+
+    @media ${theme.media.mobile} {
+        li {
+            margin-right: 30px;
         }
     }
 `;

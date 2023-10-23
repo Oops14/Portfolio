@@ -4,6 +4,7 @@ import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { ProjectCard } from "./card/ProjectCard";
 import { FlexContainer } from "../../../components/FlexContainer";
+import { theme } from "../../../styles/Theme";
 
 export const Projects = () => {
     return (
@@ -56,5 +57,17 @@ export const Projects = () => {
 const ProjectSection = styled.section``;
 
 const Row = styled(FlexContainer)`
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
+
+    @media ${theme.media.tablet} {
+        justify-content: center;
+        width: 100%;
+    }
 `;

@@ -2,6 +2,7 @@ import React from "react";
 import ProjectImg from "../../../../assets/images/project_img.png";
 import styled from "styled-components";
 import { Button } from "../../../../components/Button";
+import { theme } from "../../../../styles/Theme";
 
 type ProjectCardPropsType = {
     projDescr: string;
@@ -58,6 +59,8 @@ const ItemImg = styled.img``;
 
 const ProjectCardItem = styled.div`
     flex: 0 0 50%;
+    max-width: 50%;
+
     max-width: 470px;
     overflow: hidden;
 
@@ -65,18 +68,20 @@ const ProjectCardItem = styled.div`
     background-color: #222525;
     margin-bottom: 30px;
 
-    padding-right: 15px;
-    padding-left: 15px;
+    &:hover {
+        ${ItemImg} {
+            transform: scale(1.2);
+        }
+    }
 
-    &:hover ${ItemImg} {
-        transform: scale(1.2);
+    @media ${theme.media.tablet} {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 `;
 
 const ProjectItemTop = styled.div`
     position: relative;
-    margin-right: -15px;
-    margin-left: -15px;
     overflow: hidden;
 
     > a {

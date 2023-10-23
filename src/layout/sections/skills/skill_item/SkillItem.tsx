@@ -25,7 +25,9 @@ const SkillItemWrapper = styled.div`
     margin-bottom: 40px;
 `;
 
-const SkillItemImg = styled.div``;
+const SkillItemImg = styled.div`
+    margin-bottom: 10px;
+`;
 
 const SkillItemTitle = styled.h3`
     font-weight: 400;

@@ -32,7 +32,12 @@ export const Footer = () => {
     );
 };
 
-const FooterSection = styled.section``;
+const FooterSection = styled.section`
+    display: flex;
+    align-items: center;
+
+    height: 100px;
+`;
 
 const SocialIcons = styled.section`
     display: flex;

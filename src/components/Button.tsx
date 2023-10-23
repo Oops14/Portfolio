@@ -20,13 +20,12 @@ export const Button = styled.a<ButtonPropsType>`
     }
 
     &:hover {
-      background-color: #6e666675;
+        background-color: #6e666675;
     }
 
     ${(props) =>
         props.primary &&
         css<ButtonPropsType>`
-            //background: rgb(0,245,160);
             background: ${theme.colors.secondaryBg};
             color: rgba(37, 39, 40, 1);
 
@@ -34,4 +33,13 @@ export const Button = styled.a<ButtonPropsType>`
                 opacity: 0.8;
             }
         `}
+
+    @media ${theme.media.tablet} {
+        font-size: 15px;
+        padding: 9px 12px;
+    }
+
+    @media ${theme.media.mobile} {
+        font-size: 13px;
+    }
 `;
