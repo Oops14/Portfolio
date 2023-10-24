@@ -81,7 +81,7 @@ const IntroMainTitle = styled.h1`
     }
 `;
 
-const IntroSubtitle = styled.h1`
+const IntroSubtitle = styled.p`
     font-size: 14px;
     margin-bottom: 10px;
 
