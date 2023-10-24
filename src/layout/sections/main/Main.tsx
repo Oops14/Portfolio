@@ -78,6 +78,7 @@ const IntroMainTitle = styled.h1`
 
     @media ${theme.media.mobile} {
         margin-bottom: 15px;
+        white-space: nowrap;
     }
 `;
 

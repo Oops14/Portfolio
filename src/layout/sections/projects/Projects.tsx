@@ -67,6 +67,10 @@ const Row = styled(FlexContainer)`
     justify-content: space-between;
 
     @media ${theme.media.tablet} {
+        justify-content: space-around;
+    }
+
+    @media ${theme.media.mobile} {
         justify-content: center;
         width: 100%;
     }

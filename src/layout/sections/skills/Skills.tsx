@@ -38,10 +38,10 @@ const SkillsSection = styled.section`
     margin-bottom: 80px;
 
     @media ${theme.media.tablet} {
+        margin-bottom: 70px;
+    }
 
-        ${FlexContainer} {
-            flex-direction: column;
-            align-items: center;
-        }
+    @media ${theme.media.mobile} {
+        margin-bottom: 60px;
     }
 `;

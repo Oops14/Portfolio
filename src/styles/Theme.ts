@@ -8,6 +8,6 @@ export const theme = {
     },
     media: {
         tablet: "(max-width: 999px)",
-        mobile: "(max-width: 568px)"
+        mobile: "(max-width: 570px)"
     }
 }

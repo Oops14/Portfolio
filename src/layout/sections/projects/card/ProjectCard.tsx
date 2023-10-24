@@ -75,6 +75,10 @@ const ProjectCardItem = styled.div`
     }
 
     @media ${theme.media.tablet} {
+        max-width: 250px;
+    }
+
+    @media ${theme.media.mobile} {
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -120,15 +124,27 @@ const ProjectItemTitle = styled.h3`
             opacity: 0.8;
         }
     }
+
+    @media ${theme.media.mobile} {
+        font-size: 18px;
+    }
 `;
 
 const ProjectTechnologies = styled.div`
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+
+    @media ${theme.media.mobile} {
+        margin-bottom: 10px;
+    }
 `;
 
 const ProjectDeskription = styled.p`
     line-height: 24px;
     letter-spacing: 1px;
+
+    @media ${theme.media.mobile} {
+        font-size: 13px;
+    }
 `;
 
 const ProjectTechButton = styled(Button)`
@@ -137,4 +153,9 @@ const ProjectTechButton = styled(Button)`
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+    margin-bottom: 10px;
+
+    @media ${theme.media.tablet} {
+        padding: 5px 9px;
+    }
 `;

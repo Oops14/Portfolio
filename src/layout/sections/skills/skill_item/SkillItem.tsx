@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../../../styles/Theme";
 
 type SkillItemPropsType = {
     skillImg: string;
@@ -23,6 +24,16 @@ const SkillItemWrapper = styled.div`
 
     text-align: center;
     margin-bottom: 40px;
+
+    @media ${theme.media.tablet} {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+    @media ${theme.media.mobile} {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 `;
 
 const SkillItemImg = styled.div`
