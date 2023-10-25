@@ -10,22 +10,58 @@ import JestImage from "../../../assets/skills_Images/lapet.png";
 import ExpressImage from "../../../assets/skills_Images/express.png";
 import { SkillsSection } from "./Skills_Styles";
 
+const SkillData = [
+    {
+        skillTitle: "Javascript",
+        skillImg: JsImage
+    },
+    {
+        skillTitle: "Typescript",
+        skillImg: TypescriptImage
+    },
+    {
+        skillTitle: "Mongo DB",
+        skillImg: MongoImage
+    },
+    {
+        skillTitle: "PostgreSQL",
+        skillImg: PostgreImage
+    },
+    {
+        skillTitle: "Jest",
+        skillImg: JestImage
+    },
+    {
+        skillTitle: "Express",
+        skillImg: ExpressImage
+    },
+    {
+        skillTitle: "Javascript",
+        skillImg: JsImage
+    },
+    {
+        skillTitle: "Typescript",
+        skillImg: TypescriptImage
+    },
+    {
+        skillTitle: "Mongo DB",
+        skillImg: MongoImage
+    },
+    {
+        skillTitle: "PostgreSQL",
+        skillImg: PostgreImage
+    },
+]
+
 export const Skills = () => {
     return (
         <SkillsSection>
             <Container>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexContainer>
-                    <SkillItem skillTitle="Javascript" skillImg={JsImage} />
-                    <SkillItem skillTitle="Typescript" skillImg={TypescriptImage} />
-                    <SkillItem skillTitle="Mongo DB" skillImg={MongoImage} />
-                    <SkillItem skillTitle="PostgreSQL" skillImg={PostgreImage} />
-                    <SkillItem skillTitle="Jest" skillImg={JestImage} />
-                    <SkillItem skillTitle="Express" skillImg={ExpressImage} />
-                    <SkillItem skillTitle="Javascript" skillImg={JsImage} />
-                    <SkillItem skillTitle="Typescript" skillImg={TypescriptImage} />
-                    <SkillItem skillTitle="Mongo DB" skillImg={MongoImage} />
-                    <SkillItem skillTitle="PostgreSQL" skillImg={PostgreImage} />
+                    { SkillData.map((item, index) => {
+                        return <SkillItem key={index} skillTitle={item.skillTitle} skillImg={item.skillImg} />;
+                    })}
                 </FlexContainer>
             </Container>
         </SkillsSection>

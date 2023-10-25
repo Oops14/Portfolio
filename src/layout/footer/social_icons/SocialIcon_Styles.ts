@@ -8,6 +8,7 @@ const SocialIconItem = styled.div`
     > div {
         position: relative;
         transition: all 0.2s linear;
+        margin-bottom: 10px;
 
         a:after {
             content: "";

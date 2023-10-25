@@ -5,26 +5,38 @@ import GmailIcon from "../../assets/footer_icons/gmail.png";
 import LinkIcon from "../../assets/footer_icons/link.png";
 import { S } from "./Footer_Styles";
 
+const SocialData = [
+    {
+        icon: GithubIcon,
+        socialTitle: "Github",
+        accountLink: "#",
+    },
+    {
+        icon: GmailIcon,
+        socialTitle: "gmail",
+        accountLink: "#",
+    },
+    {
+        icon: LinkIcon,
+        socialTitle: "linkedin",
+        accountLink: "#",
+    },
+];
+
 export const Footer = () => {
     return (
         <S.FooterSection>
             <Container>
                 <S.SocialIcons>
-                    <SocialIcon
-                        icon={GithubIcon}
-                        socialTitle={"Github"}
-                        accountLink={"#"}
-                    />
-                    <SocialIcon
-                        icon={GmailIcon}
-                        socialTitle={"gmail"}
-                        accountLink={"#"}
-                    />
-                    <SocialIcon
-                        icon={LinkIcon}
-                        socialTitle={"linkedin"}
-                        accountLink={"#"}
-                    />
+                    {SocialData.map((item, index) => {
+                        return (
+                            <SocialIcon
+                                icon={item.icon} key={index}
+                                socialTitle={item.socialTitle}
+                                accountLink={item.accountLink}
+                            />
+                        );
+                    })}
                 </S.SocialIcons>
             </Container>
         </S.FooterSection>
