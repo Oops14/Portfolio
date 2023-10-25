@@ -1,17 +1,14 @@
-import React from "react";
-import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { ProjectCard } from "./card/ProjectCard";
-import { FlexContainer } from "../../../components/FlexContainer";
-import { theme } from "../../../styles/Theme";
+import { S } from "./Projects_Styles";
 
 export const Projects = () => {
     return (
-        <ProjectSection>
+        <S.ProjectSection>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
-                <Row>
+                <S.Row>
                     <ProjectCard
                         projTitle={"TITLE PROJECT"}
                         projReference={"#"}
@@ -48,30 +45,8 @@ export const Projects = () => {
                             "sunt nostrud amet."
                         }
                     />
-                </Row>
+                </S.Row>
             </Container>
-        </ProjectSection>
+        </S.ProjectSection>
     );
 };
-
-const ProjectSection = styled.section``;
-
-const Row = styled(FlexContainer)`
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    @media ${theme.media.tablet} {
-        justify-content: space-around;
-    }
-
-    @media ${theme.media.mobile} {
-        justify-content: center;
-        width: 100%;
-    }
-`;

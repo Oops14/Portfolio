@@ -1,24 +1,13 @@
-import React from "react";
-import styled from "styled-components";
 import { Menu } from "../../components/menu/Menu";
 import { Container } from "../../components/Container";
+import { HeaderMain } from "./Header_Styles";
 
 export const Header = () => {
     return (
-        <StyledHeader>
+        <HeaderMain>
             <Container>
                 <Menu />
             </Container>
-        </StyledHeader>
+        </HeaderMain>
     );
 };
-
-const StyledHeader = styled.header`
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100px;
-
-    display: flex;
-    align-items: center;
-`;

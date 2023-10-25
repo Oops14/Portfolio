@@ -1,8 +1,5 @@
-import React from "react";
 import ProjectImg from "../../../../assets/images/project_img.png";
-import styled from "styled-components";
-import { Button } from "../../../../components/Button";
-import { theme } from "../../../../styles/Theme";
+import { S } from "./ProjectCard_Styles";
 
 type ProjectCardPropsType = {
     projDescr: string;
@@ -12,150 +9,47 @@ type ProjectCardPropsType = {
 
 export const ProjectCard = (props: ProjectCardPropsType) => {
     return (
-        <ProjectCardItem>
+        <S.ProjectCardItem>
             <div className="proj-wrapper-item">
-                <ProjectItemTop>
+                <S.ProjectItemTop>
                     <a href="#"></a>
-                    <ItemImg src={ProjectImg} alt="img" />
-                </ProjectItemTop>
-                <ProjectItemBottom>
-                    <ProjectItemTitle>
+                    <S.ItemImg src={ProjectImg} alt="img" />
+                </S.ProjectItemTop>
+                <S.ProjectItemBottom>
+                    <S.ProjectItemTitle>
                         <a href={props.projReference}>{props.projTitle}</a>
-                    </ProjectItemTitle>
-                    <ProjectTechnologies>
-                        <ProjectTechButton
+                    </S.ProjectItemTitle>
+                    <S.ProjectTechnologies>
+                        <S.ProjectTechButton
                             btnSize={"8px 16px 8px 16px"}
                             primary
                         >
                             JAVASCRIPT
-                        </ProjectTechButton>
-                        <ProjectTechButton
+                        </S.ProjectTechButton>
+                        <S.ProjectTechButton
                             btnSize={"8px 16px 8px 16px"}
                             primary
                         >
                             POSTGRESQL
-                        </ProjectTechButton>
-                        <ProjectTechButton
+                        </S.ProjectTechButton>
+                        <S.ProjectTechButton
                             btnSize={"8px 16px 8px 16px"}
                             primary
                         >
                             REACT
-                        </ProjectTechButton>
-                        <ProjectTechButton
+                        </S.ProjectTechButton>
+                        <S.ProjectTechButton
                             btnSize={"8px 16px 8px 16px"}
                             primary
                         >
                             REDUX
-                        </ProjectTechButton>
-                    </ProjectTechnologies>
-                    <ProjectDeskription>{props.projDescr}</ProjectDeskription>
-                </ProjectItemBottom>
+                        </S.ProjectTechButton>
+                    </S.ProjectTechnologies>
+                    <S.ProjectDeskription>
+                        {props.projDescr}
+                    </S.ProjectDeskription>
+                </S.ProjectItemBottom>
             </div>
-        </ProjectCardItem>
+        </S.ProjectCardItem>
     );
 };
-
-const ItemImg = styled.img``;
-
-const ProjectCardItem = styled.div`
-    flex: 0 0 50%;
-    max-width: 50%;
-
-    max-width: 470px;
-    overflow: hidden;
-
-    border-radius: 6px;
-    background-color: #222525;
-    margin-bottom: 30px;
-
-    &:hover {
-        ${ItemImg} {
-            transform: scale(1.2);
-        }
-    }
-
-    @media ${theme.media.tablet} {
-        max-width: 250px;
-    }
-
-    @media ${theme.media.mobile} {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-`;
-
-const ProjectItemTop = styled.div`
-    position: relative;
-    overflow: hidden;
-
-    > a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 3;
-    }
-
-    ${ItemImg} {
-        width: 100%;
-        z-index: 1;
-        transform: scale(1);
-        transition: all 0.6s ease;
-    }
-
-    &:hover ${ItemImg} {
-        transform: scale(1.2);
-    }
-`;
-
-const ProjectItemBottom = styled.div`
-    padding: 16px;
-`;
-
-const ProjectItemTitle = styled.h3`
-    margin-bottom: 10px;
-
-    a {
-        color: inherit;
-        transition: all 0.2s linear;
-
-        &:hover {
-            opacity: 0.8;
-        }
-    }
-
-    @media ${theme.media.mobile} {
-        font-size: 18px;
-    }
-`;
-
-const ProjectTechnologies = styled.div`
-    margin-bottom: 15px;
-
-    @media ${theme.media.mobile} {
-        margin-bottom: 10px;
-    }
-`;
-
-const ProjectDeskription = styled.p`
-    line-height: 24px;
-    letter-spacing: 1px;
-
-    @media ${theme.media.mobile} {
-        font-size: 13px;
-    }
-`;
-
-const ProjectTechButton = styled(Button)`
-    font-size: 10px;
-    line-height: 14px;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-bottom: 10px;
-
-    @media ${theme.media.tablet} {
-        padding: 5px 9px;
-    }
-`;

@@ -1,5 +1,3 @@
-import React from "react";
-import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { FlexContainer } from "../../../components/FlexContainer";
 import { SkillItem } from "./skill_item/SkillItem";
@@ -10,7 +8,7 @@ import MongoImage from "../../../assets/skills_Images/mongodb.png";
 import PostgreImage from "../../../assets/skills_Images/postgre.png";
 import JestImage from "../../../assets/skills_Images/lapet.png";
 import ExpressImage from "../../../assets/skills_Images/express.png";
-import { theme } from "../../../styles/Theme";
+import { SkillsSection } from "./Skills_Styles";
 
 export const Skills = () => {
     return (
@@ -33,15 +31,3 @@ export const Skills = () => {
         </SkillsSection>
     );
 };
-
-const SkillsSection = styled.section`
-    margin-bottom: 80px;
-
-    @media ${theme.media.tablet} {
-        margin-bottom: 70px;
-    }
-
-    @media ${theme.media.mobile} {
-        margin-bottom: 60px;
-    }
-`;

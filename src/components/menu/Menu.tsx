@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import { Button } from "../Button";
+import { S } from "./Menu_Styles";
 
 export const Menu = () => {
     return (
-        <MainNavigation>
-            <LeftNavigation>
+        <S.MainNavigation>
+            <S.LeftNavigation>
                 <li>
                     <Button as="a" href="#">
                         Home
                     </Button>
                 </li>
-            </LeftNavigation>
-            <RightNavigation>
+            </S.LeftNavigation>
+            <S.RightNavigation>
                 <li>
                     <Button as="a" href="#">
                         Projects
@@ -23,37 +24,7 @@ export const Menu = () => {
                         Contact
                     </Button>
                 </li>
-            </RightNavigation>
-        </MainNavigation>
+            </S.RightNavigation>
+        </S.MainNavigation>
     );
 };
-
-const MainNavigation = styled.nav`
-    display: flex;
-    justify-content: space-between;
-`;
-
-const LeftNavigation = styled.div`
-    li {
-        list-style: none;
-    }
-`;
-
-const RightNavigation = styled(LeftNavigation)`
-    display: flex;
-    align-items: center;
-
-    li {
-        margin-right: 60px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-    @media ${theme.media.mobile} {
-        li {
-            margin-right: 30px;
-        }
-    }
-`;

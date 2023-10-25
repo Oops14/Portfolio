@@ -1,16 +1,15 @@
-import React from "react";
-import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { SocialIcon } from "./social_icons/SocialIcon";
 import GithubIcon from "../../assets/footer_icons/github.png";
 import GmailIcon from "../../assets/footer_icons/gmail.png";
 import LinkIcon from "../../assets/footer_icons/link.png";
+import { S } from "./Footer_Styles";
 
 export const Footer = () => {
     return (
-        <FooterSection>
+        <S.FooterSection>
             <Container>
-                <SocialIcons>
+                <S.SocialIcons>
                     <SocialIcon
                         icon={GithubIcon}
                         socialTitle={"Github"}
@@ -26,20 +25,8 @@ export const Footer = () => {
                         socialTitle={"linkedin"}
                         accountLink={"#"}
                     />
-                </SocialIcons>
+                </S.SocialIcons>
             </Container>
-        </FooterSection>
+        </S.FooterSection>
     );
 };
-
-const FooterSection = styled.section`
-    display: flex;
-    align-items: center;
-
-    height: 100px;
-`;
-
-const SocialIcons = styled.section`
-    display: flex;
-    justify-content: center;
-`;
